@@ -5,12 +5,12 @@ import streamlit as st
 from rag_utility import process_document_to_chroma_db, answer_question
 
 
-# set the working directory
+
 working_dir = os.getcwd()
 
-st.title("🐋 DeepSeek-R1 - Document RAG")
+st.title("DeepSeek-R1 RAG")
 
-# file uploader widget
+
 uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])
 
 if uploaded_file is not None:
@@ -24,7 +24,7 @@ if uploaded_file is not None:
     st.info("Document Processed Successfully")
 
 
-# text widget to get user input
+
 user_question = st.text_area("Ask your question about the document")
 
 if st.button("Answer"):
